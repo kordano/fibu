@@ -2,7 +2,8 @@
   (:require [goog.dom :as gdom]
             [om.next :as om :refer-macros [defui] :include-macros true]
             [sablono.core :as html :refer-macros [html]]
-            [om.dom :as dom]))
+            [om.dom :as dom]
+            [fibu.replicate :refer [start-local]]))
 
 (enable-console-print!)
 
@@ -49,6 +50,7 @@
 
 ;; -----  COMPONENTS -----
 
+
 (defui Ledger
   static om/IQuery
   (query [this]
@@ -63,18 +65,20 @@
       (let [{:keys [bookings/transactions]} (om/props this)]
         (html
          [:div
-          [:h2 "Transactions"]
+          [:h2 "Transaktionen"]
           [:table
            [:tr
-            [:th "Date"]
-            [:th "Description"]
-            [:th "Amount"]]
+            [:th "Datum"]
+            [:th "Beschreibung"]
+            [:th "Wert"]]
            (map (fn [{:keys [created-at amount transaction description]}]
                 [:tr 
                  [:td (.toLocaleDateString created-at)]
                  [:td description]
                  [:td {:style {:color (amount-color transaction)}} amount]])
               transactions)]])))))
+
+(def ledger (om/factory Ledger))
 
 (defui Capture
   Object
@@ -83,12 +87,23 @@
      [:div
       [:input {:type "text" :placeholder "Description"}]
       [:input {:type "number" :placeholder "Amount"}]
-      [:input {:type "radio" :id "expense"}]])))
+      [:input {:type "checkbox" :id "transaction"}]
+      [:input {:type "radio" :id "transaction"}]])))
 
+(def capture (om/factory Capture))
+
+(defui RootView
+  Object
+  (render [this]
+    (html
+     [:div
+      (capture (om/props this))
+      (ledger (om/props this))])))
 
 (def reconciler
   (om/reconciler
    {:state app-state
     :parser (om/parser {:read read})}))
 
-(om/add-root! reconciler Ledger (gdom/getElement "app"))
+(swap! app-state assoc-in [:replication] (start-local))
+(om/add-root! reconciler RootView (gdom/getElement "app"))

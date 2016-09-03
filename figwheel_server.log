@@ -608,3 +608,40 @@ Compiling src/fibu/core.cljs
 Compiling target/figwheel_temp/dev/figwheel/connect.cljs
 notifying browser that file changed:  out/fibu/core.js
 [32mSuccessfully compiled "resources/public/js/main.js" in 0.297 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  resources/public/js/goog/deps.js
+notifying browser that file changed:  resources/public/js/cljs_deps.js
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.41 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.307 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.35 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.321 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.337 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.333 seconds.[0m
+[0mCompiling "resources/public/js/main.js" from ["src"]...
+Compiling src/fibu/core.cljs
+Compiling target/figwheel_temp/dev/figwheel/connect.cljs
+notifying browser that file changed:  out/fibu/core.js
+[32mSuccessfully compiled "resources/public/js/main.js" in 0.362 seconds.[0m
